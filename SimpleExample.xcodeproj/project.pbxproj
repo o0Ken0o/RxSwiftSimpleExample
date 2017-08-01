@@ -15,6 +15,7 @@
 		39E867AC1F306FAF006375A7 /* ValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E867AB1F306FAF006375A7 /* ValidateTextField.swift */; };
 		39E867AE1F307389006375A7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E867AD1F307389006375A7 /* ListViewController.swift */; };
 		39E867B01F3078ED006375A7 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E867AF1F3078ED006375A7 /* UIColor+Custom.swift */; };
+		39E867B21F307B68006375A7 /* Seedings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E867B11F307B68006375A7 /* Seedings.swift */; };
 		8A1F8563E701D5639A5DD2F9 /* Pods_SimpleExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E877F871E770CA64E14BE17E /* Pods_SimpleExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		39E867AB1F306FAF006375A7 /* ValidateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateTextField.swift; sourceTree = "<group>"; };
 		39E867AD1F307389006375A7 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		39E867AF1F3078ED006375A7 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		39E867B11F307B68006375A7 /* Seedings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seedings.swift; sourceTree = "<group>"; };
 		8129D773102C764852D72CE1 /* Pods-SimpleExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleExample/Pods-SimpleExample.release.xcconfig"; sourceTree = "<group>"; };
 		976FEA617E9333A1107C43FF /* Pods-SimpleExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleExample/Pods-SimpleExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E877F871E770CA64E14BE17E /* Pods_SimpleExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				39E867AB1F306FAF006375A7 /* ValidateTextField.swift */,
 				39E867AD1F307389006375A7 /* ListViewController.swift */,
 				39E867AF1F3078ED006375A7 /* UIColor+Custom.swift */,
+				39E867B11F307B68006375A7 /* Seedings.swift */,
 			);
 			path = SimpleExample;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E867B01F3078ED006375A7 /* UIColor+Custom.swift in Sources */,
+				39E867B21F307B68006375A7 /* Seedings.swift in Sources */,
 				392A014C1F305C0C008735C5 /* FirstViewController.swift in Sources */,
 				392A014A1F305C0C008735C5 /* AppDelegate.swift in Sources */,
 				39E867AE1F307389006375A7 /* ListViewController.swift in Sources */,
