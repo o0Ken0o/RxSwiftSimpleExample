@@ -54,6 +54,7 @@ class FirstViewController: UIViewController {
     private func setupLoginBtn() {
         loginButton.layer.cornerRadius = loginButton.frame.height / 2.0
         loginButton.isEnabled = false
+        loginButton.addTarget(self, action: #selector(goToListVC(sender:)), for: .touchUpInside)
     }
     
     // MARK: RxCocoa
@@ -87,6 +88,12 @@ class FirstViewController: UIViewController {
         isLoginBtnEnabled
             .bind(to: self.loginButton.rx.isEnabled)
             .addDisposableTo(disposeBag)
+    }
+}
+
+extension FirstViewController {
+    func goToListVC(sender: UIButton) {
+        performSegue(withIdentifier: "ListViewController", sender: nil)
     }
 }
 
