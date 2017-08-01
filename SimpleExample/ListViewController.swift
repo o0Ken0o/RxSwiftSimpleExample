@@ -18,7 +18,8 @@ class ListViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     let cellIdentifier = "CellIdentifier"
-    var data = Observable.just(names)
+    var originData = names
+    var data: Variable<[String]> = Variable([])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,9 @@ class ListViewController: UIViewController {
         setupTableView()
         setupCells()
         setupCellTapping()
+        setupSearchBar()
+        
+        data.value = originData
     }
     
     private func setupTableView() {
@@ -33,7 +37,7 @@ class ListViewController: UIViewController {
     }
     
     private func setupCells() {
-        data.bind(to: tableView
+        data.asObservable().bind(to: tableView
             .rx
             .items(cellIdentifier: cellIdentifier, cellType: UITableViewCell.self)) {
             row, name, cell in
@@ -53,6 +57,16 @@ class ListViewController: UIViewController {
                     self.tableView.deselectRow(at: indexPath, animated: true)
                 }
                 
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    private func setupSearchBar() {
+        searchBar.rx.text.throttle(0.1, scheduler: MainScheduler.instance)
+            .subscribe(onNext: {
+                [unowned self] (searchStr) in
+                guard let searchStr = searchStr else { self.data.value = self.originData; return }
+                self.data.value = self.originData.filter({ searchStr.characters.count == 0 ? true : $0.contains(searchStr) })
             })
             .addDisposableTo(disposeBag)
     }
